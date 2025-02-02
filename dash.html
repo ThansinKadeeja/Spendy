@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        header nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        header nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .balance, .expenses, .financial-goals {
+            background-color: #fff;
+            margin: 20px 0;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table th, table td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        button {
+            background-color: #f44336;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #d32f2f;
+        }
+
+        form input, form button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        form button {
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: #45a049;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>SPENDY!</h1>
+        </div>
+    </header>
+    <main>
+        <section class="balance">
+            <h2>Your Balance</h2>
+            <div class="balance-amount">
+                <h3>$1,500.00</h3>
+            </div>
+        </section>
+        <section class="expenses">
+            <h2>Recent Expenses</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Category</th>
+                        <th>Amount</th>
+                        <th>Date</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Groceries</td>
+                        <td>$50.00</td>
+                        <td>Feb 1, 2025</td>
+                        <td><button>Delete</button></td>
+                    </tr>
+                    <tr>
+                        <td>Transportation</td>
+                        <td>$30.00</td>
+                        <td>Feb 1, 2025</td>
+                        <td><button>Delete</button></td>
+                    </tr>
+                    <tr>
+                        <td>Utilities</td>
+                        <td>$100.00</td>
+                        <td>Jan 30, 2025</td>
+                        <td><button>Delete</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section class="financial-goals">
+            <h2>Financial Goals</h2>
+            <div>
+                <h3>Save for Vacation</h3>
+                <p>Goal: $2,000</p>
+                <p>Progress: $500</p>
+                <button>Update</button>
+            </div>
+            <div>
+                <h3>Emergency Fund</h3>
+                <p>Goal: $3,000</p>
+                <p>Progress: $1,500</p>
+                <button>Update</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 SPENDY! App. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+

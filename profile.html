@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile - Expense Tracker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile-header {
+            text-align: center;
+        }
+
+        .profile-photo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background-color: #ddd;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        .user-details h2 {
+            margin: 10px 0 5px;
+        }
+
+        .user-details p {
+            margin: 5px 0;
+            color: #555;
+        }
+
+        .account-summary, .recent-activity {
+            margin-top: 20px;
+        }
+
+        .account-summary h3, .recent-activity h3 {
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 5px;
+        }
+
+        .summary-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+        }
+
+        .recent-activity ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .recent-activity li {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .edit-profile-btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-top: 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .edit-profile-btn:hover {
+            background-color: #45a049;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="profile-header">
+            <div class="profile-photo"></div>
+            <div class="user-details">
+                <h2>John Doe</h2>
+                <p>Email: john.doe@example.com</p>
+                <p>Bio: Budgeting enthusiast, loves tracking every penny!</p>
+            </div>
+        </div>
+
+        <div class="account-summary">
+            <h3>Account Summary</h3>
+            <div class="summary-item">
+                <span>Total Income:</span>
+                <span>$5,000</span>
+            </div>
+            <div class="summary-item">
+                <span>Total Expenses:</span>
+                <span>$2,500</span>
+            </div>
+            <div class="summary-item">
+                <strong>Current Balance:</strong>
+                <strong>$2,500</strong>
+            </div>
+        </div>
+
+        <div class="recent-activity">
+            <h3>Recent Activity</h3>
+            <ul>
+                <li>
+                    <span>01/30/2025 - Groceries</span>
+                    <span>$150</span>
+                </li>
+                <li>
+                    <span>01/28/2025 - Utilities</span>
+                    <span>$100</span>
+                </li>
+                <li>
+                    <span>01/25/2025 - Transportation</span>
+                    <span>$50</span>
+                </li>
+                <li>
+                    <span>01/20/2025 - Dining Out</span>
+                    <span>$75</span>
+                </li>
+                <li>
+                    <span>01/18/2025 - Subscription</span>
+                    <span>$20</span>
+                </li>
+            </ul>
+        </div>
+
+        <button class="edit-profile-btn">Edit Profile</button>
+    </div>
+</body>
+</html>

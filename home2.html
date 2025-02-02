@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPENDY!</title>
+    <style>
+        /* Reset default browser margins */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #e0f7fa, #e1bee7);
+            color: #333;
+            line-height: 1.6;
+            padding-bottom: 60px; /* To make room for the fixed footer */
+        }
+
+        header {
+            background: linear-gradient(90deg, #6200ea, #3700b3);
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            letter-spacing: 2px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            padding: 1rem 0;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.2rem;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: scale(1.1);
+        }
+
+        section {
+            padding: 3rem 2rem;
+            margin: 2rem auto;
+            width: 90%;
+            max-width: 800px;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: #6200ea;
+            margin-bottom: 1rem;
+            position: relative;
+        }
+
+        h2::after {
+            content: '';
+            width: 50px;
+            height: 3px;
+            background: #6200ea;
+            display: block;
+            margin: 0.5rem auto 1rem;
+            border-radius: 2px;
+        }
+
+        p {
+            font-size: 1.2rem;
+            color: #555;
+            margin-bottom: 1.5rem;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li {
+            font-size: 1.1rem;
+            margin: 0.5rem 0;
+            color: #444;
+            padding: 0.5rem;
+            background: #f1f1f1;
+            border-radius: 10px;
+            transition: transform 0.2s ease, background 0.2s ease;
+        }
+
+        ul li:hover {
+            background: #e1bee7;
+            transform: scale(1.03);
+        }
+
+        footer {
+            background: linear-gradient(90deg, #6200ea, #3700b3);
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        footer p {
+            font-size: 1rem;
+            letter-spacing: 1px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            nav ul li a {
+                font-size: 1rem;
+            }
+
+            section {
+                padding: 2rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>SPENDY!</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about">
+        <h2>About This App</h2>
+        <p>Manage your finances effortlessly with our Expense Tracker. Track, categorize, and analyze your spending habits all in one place.</p>
+    </section>
+
+    <section id="features">
+        <h2>Features</h2>
+        <ul>
+            <li>Track daily, weekly, or monthly expenses</li>
+            <li>Set budgets with instant notifications</li>
+            <li>Visualize spending with detailed graphs</li>
+            <li>Export reports to CSV for easy management</li>
+        </ul>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Need help or have suggestions? We’d love to hear from you!</p>
+        <p>Email: <strong>support@spendy.com</strong></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 SPENDY!. All rights reserved.</p>
+    </footer>
+</body>
+</html>

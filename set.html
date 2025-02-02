@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Settings</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      padding: 20px;
+    }
+    .settings-container {
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    .setting {
+      margin-bottom: 20px;
+    }
+    .setting label {
+      font-size: 16px;
+      display: block;
+      margin-bottom: 5px;
+    }
+    .setting input,
+    .setting select {
+      width: 100%;
+      padding: 10px;
+      font-size: 14px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .setting button {
+      padding: 10px 15px;
+      font-size: 16px;
+      color: #fff;
+      background-color: #4caf50;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .setting button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <div class="settings-container">
+    <h1>Settings</h1>
+
+    <!-- Setting 1: Change Username -->
+    <div class="setting">
+      <label for="username">Username</label>
+      <input type="text" id="username" placeholder="Enter your new username">
+    </div>
+
+    <!-- Setting 2: Change Password -->
+    <div class="setting">
+      <label for="password">Password</label>
+      <input type="password" id="password" placeholder="Enter new password">
+    </div>
+
+    <!-- Setting 3: Notification Preferences -->
+    <div class="setting">
+      <label for="notifications">Notifications</label>
+      <select id="notifications">
+        <option value="on">Enabled</option>
+        <option value="off">Disabled</option>
+      </select>
+    </div>
+
+    <!-- Setting 4: Language -->
+    <div class="setting">
+      <label for="language">Language</label>
+      <select id="language">
+        <option value="en">English</option>
+        <option value="es">Spanish</option>
+        <option value="fr">French</option>
+        <option value="de">German</option>
+      </select>
+    </div>
+
+    <!-- Save Button -->
+    <div class="setting">
+      <button type="submit">Save Changes</button>
+    </div>
+  </div>
+</body>
+</html>

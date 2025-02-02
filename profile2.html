@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile - Expense Tracker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile-header {
+            text-align: center;
+        }
+
+        .profile-photo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background-color: #ddd;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        .user-details h2, .user-details p {
+            margin: 10px 0 5px;
+        }
+
+        .account-summary, .recent-activity {
+            margin-top: 20px;
+        }
+
+        .account-summary h3, .recent-activity h3 {
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 5px;
+        }
+
+        .summary-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+        }
+
+        .recent-activity ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .recent-activity li {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .edit-profile-btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-top: 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .edit-profile-btn:hover {
+            background-color: #45a049;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="profile-header">
+            <div class="profile-photo"></div>
+            <div class="user-details">
+                <h2 id="user-name"></h2>
+                <p id="user-email"></p>
+                <p id="user-bio"></p>
+            </div>
+        </div>
+
+        <div class="account-summary">
+            <h3>Account Summary</h3>
+            <div class="summary-item">
+                <span>Total Income:</span>
+                <span id="total-income"></span>
+            </div>
+            <div class="summary-item">
+                <span>Total Expenses:</span>
+                <span id="total-expenses"></span>
+            </div>
+            <div class="summary-item">
+                <strong>Current Balance:</strong>
+                <strong id="current-balance"></strong>
+            </div>
+        </div>
+
+        <div class="recent-activity">
+            <h3>Recent Activity</h3>
+            <ul id="activity-list">
+                <!-- Activity items will be added here dynamically -->
+            </ul>
+        </div>
+
+        <button class="edit-profile-btn">Edit Profile</button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .form-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            margin: 0 auto;
+        }
+        .form-container input,
+        .form-container select,
+        .form-container button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .expense-table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+        .expense-table th, .expense-table td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+        .expense-table th {
+            background-color: #f4f4f4;
+        }
+        .expense-item {
+            margin-top: 20px;
+        }
+        .total-expense {
+            text-align: right;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Expense Tracker</h1>
+    
+    <!-- Form to add expense -->
+    <div class="form-container">
+        <label for="expense-name">Expense Name</label>
+        <input type="text" id="expense-name" placeholder="Enter expense name">
+        
+        <label for="expense-category">Category</label>
+        <select id="expense-category">
+            <option value="Food">Food</option>
+            <option value="Entertainment">Entertainment</option>
+            <option value="Transport">Transport</option>
+            <option value="Utilities">Utilities</option>
+        </select>
+        
+        <label for="expense-amount">Amount</label>
+        <input type="number" id="expense-amount" placeholder="Enter amount" step="0.01">
+        
+        <button onclick="addExpense()">Add Expense</button>
+    </div>
+
+    <!-- Displaying expenses -->
+    <div class="expense-item">
+        <table class="expense-table" id="expense-table">
+            <thead>
+                <tr>
+                    <th>Expense Name</th>
+                    <th>Category</th>
+                    <th>Amount</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Expenses will be added here -->
+            </tbody>
+        </table>
+        <div class="total-expense" id="total-expense">
+            Total: $0.00
+        </div>
+    </div>
+
+    <script>
+        let totalExpense = 0;
+        const expenseLimit = 5; // Limit the number of recent expenses displayed
+
+        function addExpense() {
+            // Get values from the form
+            const expenseName = document.getElementById('expense-name').value;
+            const expenseCategory = document.getElementById('expense-category').value;
+            const expenseAmount = parseFloat(document.getElementById('expense-amount').value);
+
+            // Validate input
+            if (!expenseName || !expenseAmount || isNaN(expenseAmount)) {
+                alert('Please fill in all fields with valid information.');
+                return;
+            }
+
+            // Create a new expense object
+            const newExpense = {
+                name: expenseName,
+                category: expenseCategory,
+                amount: expenseAmount
+            };
+
+            // Add the expense to the table
+            addExpenseToTable(newExpense);
+
+            // Update the total expense
+            totalExpense += expenseAmount;
+            document.getElementById('total-expense').textContent = `Total: $${totalExpense.toFixed(2)}`;
+
+            // Clear the form
+            document.getElementById('expense-name').value = '';
+            document.getElementById('expense-amount').value = '';
+        }
+
+        function addExpenseToTable(expense) {
+            const table = document.getElementById('expense-table').getElementsByTagName('tbody')[0];
+
+            // Create a new row for the table
+            const row = table.insertRow(0); // Insert at the top (most recent at top)
+
+            // Insert cells into the row
+            const cellName = row.insertCell(0);
+            const cellCategory = row.insertCell(1);
+            const cellAmount = row.insertCell(2);
+
+            // Set the cell values
+            cellName.textContent = expense.name;
+            cellCategory.textContent = expense.category;
+            cellAmount.textContent = `$${expense.amount.toFixed(2)}`;
+
+            // Keep only the most recent expenses
+            if (table.rows.length > expenseLimit) {
+                table.deleteRow(table.rows.length - 1); // Remove the oldest expense
+            }
+        }
+    </script>
+</body>
+</html>
+

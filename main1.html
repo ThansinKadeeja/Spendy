@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spendy - Expense Tracker</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      background-color: #f9fafb;
+    }
+
+    .sidebar {
+      height: 100vh;
+      width: 250px;
+      background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      transition: width 0.3s ease-in-out;
+      box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .sidebar h2 {
+      padding: 20px;
+      margin: 0;
+      background: rgba(0, 0, 0, 0.2);
+      text-align: center;
+      font-size: 1.8rem;
+      letter-spacing: 1px;
+    }
+
+    .sidebar a {
+      padding: 15px 20px;
+      text-decoration: none;
+      color: white;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 1rem;
+      transition: background 0.3s;
+    }
+
+    .sidebar a:hover {
+      background: rgba(255, 255, 255, 0.2);
+      border-left: 4px solid #fcd34d;
+    }
+
+    .logout {
+      margin-top: auto;
+      padding: 15px 20px;
+      background: #ef4444;
+      text-align: center;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .logout:hover {
+      background: #dc2626;
+    }
+
+    .main-content {
+      flex: 1;
+      padding: 20px;
+      background-color: #f9fafb;
+      position: relative;
+    }
+
+    .toggle-btn {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background: #1e3a8a;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+      border-radius: 8px;
+      font-size: 1.5rem;
+      z-index: 1000;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .toggle-btn:hover {
+      background: #3b82f6;
+    }
+
+    .sidebar.collapsed {
+      width: 70px;
+    }
+
+    .sidebar.collapsed h2, 
+    .sidebar.collapsed a span, 
+    .sidebar.collapsed .logout span {
+      display: none;
+    }
+
+    .sidebar a i {
+      text-align: center;
+      font-size: 1.5rem;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+    }
+
+    .header h1 {
+      margin: 0;
+      color: #1e3a8a;
+    }
+
+    .content-section {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+<body>
+  <div class="sidebar">
+    <h2>Spendy</h2>
+    <a href="./dash.html"><i>🏠</i><span>Dashboard</span></a>
+    <a href="./an.html"><i>📊</i><span>Analytics</span></a>
+    <a href="./track.html"><i>💳</i><span>Expenses</span></a>
+    <a href="./notif.html"><i>🔔</i><span>Notifications</span></a>
+    <a href="./set.html"><i>⚙️</i><span>Settings</span></a>
+    <div class="logout"><i>🚪</i><span>Logout</span></div>
+  </div>
+
+  <div class="main-content">
+    <button class="toggle-btn">☰</button>
+    <div class="header">
+      <h1> Welcome to Spendy!</h1>
+      <p>TRACK. PLAN. PROSPER.</p>
+    </div>
+    <div class="content-section">
+      <title>Spendy!</title>
+    
+  <style>
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      background-color: #f8f9fa;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo {
+      font-size: 2rem; /* Increased font size */
+      font-weight: bold;
+      color: #333;
+    }
+
+    .actions button {
+      margin-left: 10px;
+      padding: 10px 20px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 25px; 
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .actions button a {
+      text-decoration: none;
+      color: white;
+    }
+
+    .actions button:first-child {
+      background-color: #007bff; 
+    }
+
+    .actions button:last-child {
+      background-color: #28a745; 
+    }
+
+    .actions button:hover {
+      transform: translateY(-2px); 
+      opacity: 0.9;
+    }
+
+    .actions button:active {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">SPENDY!</div>
+    <div class="actions">
+      <button><a href="./signin.html">Sign In</a></button>
+      <button><a href="./signup.html">Sign Up</a></button>
+    </div>
+  </nav>
+</body>
+  </div>
+
+  <head>
+    <style>
+      .tabs {
+        display: flex;
+        gap: 10px;
+      }
+  
+      .tab-button {
+        background-color: #f0f0f0;
+        border: none;
+        padding: 15px 25px;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+  
+      .tab-button a {
+        text-decoration: none;
+        font-size: 20px; /* Larger font size */
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Stylish font */
+        color: #333;
+        font-weight: bold;
+      }
+  
+      .tab-button.active,
+      .tab-button:hover {
+        background-color: #dcdcdc;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="tabs">
+      <button class="tab-button active" data-tab="home">
+        <a href="./home2.html">Homepage</a>
+      </button>
+      <button class="tab-button" data-tab="profile">
+        <a href="./profile2.html">Profile</a>
+      </button>
+      <button class="tab-button" data-tab="expenses">
+        <a href="./track.html">Expense Tracker</a>
+      </button>
+    </div>
+  </body>
+
+  <script>
+    const toggleBtn = document.querySelector('.toggle-btn');
+    const sidebar = document.querySelector('.sidebar');
+
+    toggleBtn.addEventListener('click', () => {
+      sidebar.classList.toggle('collapsed');
+    });
+  </script>
+  
+</style>
+</body>
+</html>
